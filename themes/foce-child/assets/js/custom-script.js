@@ -3,7 +3,7 @@ const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 'auto',
-    centeredSlides: false,
+    centeredSlides: true,
     initialSlide: 0,
     spaceBetween: 65,  
     effect: 'coverflow',
@@ -14,7 +14,11 @@ const swiper = new Swiper('.swiper', {
       depth: 100,
       modifier: 1,
       slideShadows: false,
-    }   
+    },
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false,
+    }
 });
 
 //initialisation des animations au scroll 
@@ -26,7 +30,7 @@ var s = skrollr.init({
 /* pour bloquer skrollr basse résolution
 var windowWidth = window.innerWidth;
 
-if (windowWidth > 700) {
+if (windowWidth > 1000) {
   var s = skrollr.init({
     forceHeight: false,
     smoothScrolling: true,
@@ -42,7 +46,7 @@ window.addEventListener('scroll', function() {
       var elementPosition = element.getBoundingClientRect().top;
       var scrollPosition = window.scrollY;
   
-      if (scrollPosition > elementPosition - (windowHeight * 0.5)) {
+      if (scrollPosition > elementPosition - (windowHeight * 0.3)) {
         element.classList.add('anim');
       } else {
         element.classList.remove('anim');
@@ -50,7 +54,7 @@ window.addEventListener('scroll', function() {
     });
   });
 
-//définis un écouteur pour vérifier la position d'un élément par rapport à la fenêtre d'affichage pour translation des titres
+//définis un écouteur pour vérifier la position d'un élément par rapport à la fenêtre d'affichage pour translation des backgrounds de titres
 window.addEventListener('scroll', function() {
   var toAnimElements = document.querySelectorAll('.toAnimUp');
 
@@ -59,7 +63,7 @@ window.addEventListener('scroll', function() {
     var elementPosition = element.getBoundingClientRect().top;
     var scrollPosition = window.scrollY;
 
-    if (scrollPosition > elementPosition - (windowHeight * 0.5)) {
+    if (scrollPosition > elementPosition - (windowHeight * 0.3)) {
       element.classList.add('animUp');
     } else {
       element.classList.remove('animUp');

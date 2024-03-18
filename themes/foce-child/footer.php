@@ -16,7 +16,7 @@
         <?php get_template_part( 'template-parts/content-oscar' ); ?>
         <img class="footerBefore" src="<?php echo get_template_directory_uri() . './assets/images/Sunflower.png'; ?> " alt="image de fleur décorative" data-2200="animation-duration: 15s;"  data-2700="animation-duration: 2s;">
         <img class="footerAfter" src="<?php echo get_template_directory_uri() . './assets/images/orchid.png'; ?> " alt="image de fleur décorative" data-2200="animation-duration: 15s;"  data-2700="animation-duration: 2s;">
-        <img class="footerUlAfter" src="<?php echo get_template_directory_uri() . './assets/images/hibiscus_footer.png'; ?> " alt="image de fleur décorative" data-2300="animation-duration: 15s;"  data-2700="animation-duration: 2s;">
+        <img class="footerUlAfter" src="<?php echo get_template_directory_uri() . './assets/images/hibiscus_footer.png'; ?> " alt="image de fleur décorative" data-2300="animation-duration: 15s;"  data-2900="animation-duration: 2s;">
         <ul>
             <li><a href="#">Mentions Légales</a></li>
             <li><a href="#">STUDIO KOUKAKI</a></li>
