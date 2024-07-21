@@ -1,0 +1,571 @@
+@keyframes move-up {
+  0% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes move-up-site-title {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes move-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes oscillation {
+  0% {
+    transform: translateX(-10px) translateY(0px);
+  }
+  25% {
+    transform: translateX(10px) translateY(-10px);
+  }
+  50% {
+    transform: translateX(-10px) translateY(0px);
+  }
+  75% {
+    transform: translateX(10px) translateY(10px);
+  }
+  100% {
+    transform: translateX(-10px) translateY(0px);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.toAnim {
+  opacity: 0;
+  transition: 2s ease-in-out;
+}
+
+.toAnim.anim {
+  opacity: 1;
+}
+
+.toAnimUp {
+  transition: 1s ease-in-out;
+}
+
+.toAnimUp.animUp {
+  animation: move-up 3s ease-in-out;
+}
+
+.site-header {
+  height: 80px;
+}
+.site-header .main-navigation .site-title {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+}
+.site-header .main-navigation .site-title .title {
+  flex: 1;
+  text-align: right;
+  max-width: 62%;
+  padding-top: 20px;
+}
+.site-header .main-navigation .site-title .menu {
+  flex: 1;
+  text-align: right;
+  max-width: 38%;
+  padding-top: 20px;
+}
+.site-header .main-navigation .site-title .menu .menu-toggle {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding-left: 60%;
+}
+.site-header .main-navigation .site-title .menu .menu-toggle .line {
+  width: 30px;
+  margin-block: 3px;
+  height: 1px;
+}
+.site-header .main-navigation .img-header {
+  display: none;
+  position: relative;
+  animation: fade-in 1s ease-in-out;
+}
+.site-header .main-navigation .img-header .logo-header {
+  position: absolute;
+  width: 200px;
+  left: calc(50% - 100px);
+  top: calc(10% - 51px);
+  z-index: 5;
+  filter: drop-shadow(0 0 10px rgb(235, 89, 53));
+}
+.site-header .main-navigation .img-header .flower-header {
+  position: absolute;
+  left: calc(20% - 74px);
+  bottom: calc(40% - 11px);
+  max-width: 75px;
+  animation: rotate 14s linear infinite;
+}
+.site-header .main-navigation .img-header .random-flower-header {
+  position: absolute;
+  right: calc(1% - 60px);
+  top: calc(50% - 17px);
+  width: 100px;
+  animation: rotate 13s linear infinite;
+}
+.site-header .main-navigation .img-header .sunflower-header {
+  position: absolute;
+  right: calc(15% - 40px);
+  top: calc(20% - 90px);
+  width: 200px;
+  animation: rotate 16s linear infinite;
+}
+.site-header .main-navigation .img-header .orchid-header {
+  position: absolute;
+  left: calc(1% - 77px);
+  top: calc(10% + 50px);
+  animation: rotate 10s linear infinite;
+}
+.site-header .main-navigation .img-header .hibiscus-footer-header {
+  position: absolute;
+  right: calc(-16% - 103px);
+  bottom: calc(-16% - 103px);
+  animation: rotate 15s linear infinite;
+}
+.site-header .main-navigation .img-header .jaakuna-header {
+  position: absolute;
+  right: calc(10% + 50px);
+  bottom: calc(25% + 50px);
+  width: 200px;
+  animation: oscillation 8s ease-in-out infinite;
+}
+.site-header .main-navigation .img-header .orenjiiro-header {
+  position: absolute;
+  left: calc(5% - 26px);
+  bottom: calc(5% + 21px);
+  width: 200px;
+  animation: oscillation 3s ease-in-out infinite;
+}
+.site-header .main-navigation .img-header .Kawaneko-header {
+  position: absolute;
+  left: calc(20% - 43px);
+  top: calc(20% + 71px);
+  width: 200px;
+  animation: oscillation 6s ease-in-out infinite;
+}
+.site-header .main-navigation .img-header ul {
+  padding: 0;
+  font-size: 64px;
+  display: none;
+  overflow: hidden;
+}
+.site-header .main-navigation .img-header ul li {
+  position: relative;
+  font-size: 64px;
+  background-color: transparent;
+  overflow: hidden;
+}
+.site-header .main-navigation .img-header ul li a {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  animation: move-up-site-title 2s ease-in-out;
+}
+.site-header .main-navigation .img-header p {
+  position: absolute;
+  left: calc(50% - 50px);
+  bottom: 10vh;
+}
+.site-header .main-navigation.toggled .img-header {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+.site-header .main-navigation.toggled span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.site-header .main-navigation.toggled span:nth-child(2) {
+  opacity: 0;
+}
+.site-header .main-navigation.toggled span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+.site-header .main-navigation.toggled ul {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #FFF5E9;
+  padding-top: 160px;
+  padding-bottom: 240px;
+}
+.site-header .main-navigation.toggled li:hover {
+  text-shadow: 0 0 15px rgb(235, 89, 53);
+}
+
+.site-main .banner {
+  animation: move-down 3s ease-in-out;
+  background-size: cover;
+}
+.site-main .banner img {
+  animation: move-up-site-title 3s ease-in-out;
+  z-index: 2;
+  position: sticky;
+  top: 30px;
+}
+.site-main .banner .header-video {
+  position: absolute;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.site-main .story .story-h2-div {
+  background-image: url("../images/purple_title_bg.png");
+  background-size: contain;
+  padding: 1em 2em;
+  margin: 0;
+  background-position: center;
+}
+.site-main .story .story-h2-div h2 {
+  z-index: 2;
+  background-image: none;
+  background-color: transparent;
+}
+.site-main .story .story-h2-div h2::before {
+  content: none;
+}
+.site-main .story .story-h2-div h2::after {
+  content: none;
+}
+.site-main .story .storyH2Before {
+  position: absolute;
+  left: 2em;
+  top: 8em;
+  z-index: -1;
+}
+.site-main .story .storyH2After {
+  position: absolute;
+  left: 5em;
+  top: 27em;
+  z-index: 3;
+  animation: rotate 10s linear infinite;
+}
+.site-main .story__article::before {
+  content: none;
+}
+.site-main .story__article p {
+  z-index: 4;
+}
+.site-main .story__article::after {
+  content: none;
+}
+.site-main .story .storyArticleBefore {
+  position: absolute;
+  right: 9em;
+  top: 9em;
+  z-index: 2;
+}
+.site-main .story .storyArticleAfter {
+  position: absolute;
+  right: 8.5em;
+  top: 2em;
+  z-index: 3;
+  animation: rotate 10s linear infinite;
+}
+.site-main .story #characters {
+  flex-direction: column;
+  margin: 0;
+  padding: 30px 0;
+}
+.site-main .story #characters .characters-h3-div {
+  background-image: url("../images/orange_characters_bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 1em 2em;
+  margin: 0;
+  background-position: left;
+}
+.site-main .story #characters .characters-h3-div h3 {
+  background-image: none;
+  text-align: left;
+}
+.site-main .story #characters div {
+  flex: none;
+}
+.site-main .story #characters .swiper {
+  width: auto;
+}
+.site-main .story #characters .swiper .swiper-wrapper {
+  padding-left: 5%;
+}
+.site-main .story #characters .swiper .swiper-wrapper .swiper-slide {
+  width: auto;
+}
+.site-main .story #place {
+  background-image: url("../images/Studio_Koukaki-image_place.png");
+  position: relative;
+  z-index: -1;
+}
+.site-main .story #place .cloud1 {
+  content: url("../images/big_cloud.png");
+  position: absolute;
+  left: 32em;
+  top: 5em;
+  z-index: 1;
+  filter: blur(20px);
+  opacity: 0.8;
+}
+.site-main .story #place .cloud2 {
+  content: url("../images/little_cloud.png");
+  position: absolute;
+  left: 20em;
+  top: 17em;
+  z-index: 1;
+  filter: blur(10px);
+  opacity: 0.8;
+}
+.site-main .story #place .place-h3-div {
+  background-image: url("../images/orange_place_bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 1em 2em;
+  margin: 0;
+  background-position: center;
+  overflow: hidden;
+}
+.site-main .story #place .place-h3-div h3 {
+  z-index: 2;
+  background-image: none;
+  margin-bottom: 0;
+}
+.site-main .story #place > div p {
+  padding-top: 20px;
+}
+.site-main #studio {
+  overflow: hidden;
+  animation: none;
+  background-image: none;
+}
+.site-main #studio .studio-h2-div {
+  background-image: url("../images/purple_studio_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 1em 2em;
+  margin: 0;
+  justify-content: center;
+  width: 100%;
+}
+.site-main #studio .studio-h2-div h2 {
+  background-image: none;
+  background-color: transparent;
+  justify-content: center;
+}
+.site-main #studio .studio-h2-div h2::before {
+  content: none;
+}
+.site-main #studio .studio-h2-div h2::after {
+  content: none;
+}
+.site-main #studio .studioBefore {
+  position: absolute;
+  left: -5em;
+  top: 0;
+  animation: rotate 10s linear infinite;
+  z-index: 2;
+}
+.site-main #studio .studioAfter {
+  position: absolute;
+  right: 5em;
+  top: 6em;
+  animation: rotate 10s linear infinite;
+  z-index: 2;
+}
+.site-main #studio .studioDivBefore {
+  position: absolute;
+  left: calc(50% - 17.225px);
+  top: 50%;
+  animation: oscillation 8s ease-in-out infinite;
+  z-index: 4;
+}
+.site-main #studio > div::before {
+  content: none;
+}
+.site-main #studio > div p {
+  z-index: 3;
+}
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10em;
+}
+.site-footer .oscar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 20%;
+}
+.site-footer .oscar h3 {
+  text-shadow: 0 0 70px rgb(255, 98, 9);
+  filter: drop-shadow(0 0 30px rgb(255, 89, 9)) drop-shadow(0 0 30px rgb(255, 89, 9)) drop-shadow(0 0 30px rgb(255, 89, 9));
+  color: #FFF5E9;
+  font-size: 3rem;
+  text-align: left;
+}
+.site-footer .oscar img {
+  max-width: 20%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 4%;
+}
+.site-footer::before {
+  display: none;
+}
+.site-footer::after {
+  display: none;
+}
+.site-footer .footerBefore {
+  position: absolute;
+  left: 4em;
+  top: 7em;
+  animation: rotate 10s linear infinite;
+}
+.site-footer .footerAfter {
+  position: absolute;
+  right: -4em;
+  bottom: 30em;
+  animation: rotate 10s linear infinite;
+}
+.site-footer ul::after {
+  display: none;
+}
+.site-footer .footerUlAfter {
+  position: absolute;
+  left: calc(50% - 323px);
+  bottom: -28.5em;
+  z-index: -1;
+  animation: rotate 10s linear infinite;
+}
+
+@media screen and (min-width: 700px) {
+  .menu-toggle {
+    display: none;
+  }
+  .main-navigation {
+    height: 80px;
+  }
+  .main-navigation ul {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+  }
+  .main-navigation ul .site-title {
+    display: block;
+  }
+}
+@media all and (max-width: 1192px) {
+  .story .storyH2Before {
+    display: none;
+  }
+  .story .storyH2After {
+    width: 10%;
+  }
+  .story .storyArticleBefore {
+    display: none;
+  }
+  .story .storyArticleAfter {
+    width: 10%;
+  }
+  .site-footer .oscar {
+    flex-direction: column;
+  }
+  .site-footer .oscar img {
+    max-width: 60%;
+  }
+  .site-footer .footerBefore {
+    display: none;
+  }
+}
+@media all and (max-width: 920px) {
+  .story .storyH2After {
+    display: none;
+  }
+  .story #place .cloud1 {
+    width: 25%;
+  }
+  .story #place .cloud2 {
+    width: 20%;
+  }
+  #studio .studioDivBefore {
+    display: none;
+  }
+  #studio .studioBefore {
+    width: 5%;
+  }
+  #studio .studioAfter {
+    width: 5%;
+  }
+  .site-footer .footerAfter {
+    width: 15%;
+  }
+  .site-footer .footerUlAfter {
+    display: none;
+  }
+}
+@media all and (max-width: 550px) {
+  h3, h2 {
+    font-size: 2em;
+  }
+  .main-navigation .site-title {
+    font-size: 1.3em;
+  }
+  .main-navigation ul li a {
+    font-size: 32px;
+  }
+  .site-main .story .storyArticleAfter {
+    display: none;
+  }
+  .site-main .story #characters .characters-h3-div {
+    background-position: center;
+  }
+  .site-main .story #characters .characters-h3-div h3 {
+    margin: 0% 25%;
+    font-size: 2em;
+  }
+  .site-main #studio .studioBefore {
+    display: none;
+  }
+  .site-main #studio .studioAfter {
+    display: none;
+  }
+  .site-footer .oscar h3 {
+    font-size: 2em;
+  }
+  .site-footer .footerAfter {
+    width: 15%;
+  }
+  .site-footer .footerUlAfter {
+    display: none;
+  }
+}
